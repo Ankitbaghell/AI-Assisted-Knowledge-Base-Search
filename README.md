@@ -137,20 +137,24 @@ Search for articles related to a keyword.
 
 ---
 
-## 🤖 AI Code Assistant Usage Log (Detailed)
+| #  | Context / Task                          | Prompt Given                                                          | AI Suggestion                                                             | Action Taken                      |
+| -- | --------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------- |
+| 1  | MySQL config                            | "Spring Boot datasource properties for MySQL"                         | Provided complete configuration including `createDatabaseIfNotExist=true` | ✅ Used                            |
+| 2  | Search controller method                | "Spring controller method with query param using ResponseEntity"      | Gave method using `@RequestParam`, `ResponseEntity.ok()`                  | ✅ Used and implemented            |
+| 3  | Simulate AI summary                     | "Java logic to create a summary string from a list of article titles" | Used `StringBuilder` with `\n`                                            | ✅ Initially used, improved later  |
+| 4  | Clean AI summary output                 | "Create a comma-separated string from article titles"                 | Suggested `String.join()`                                                 | ✅ Used to replace `\n` output     |
+| 5  | Create ArticleRequest to Article mapper | "Map DTO to entity in Java"                                           | Provided conversion method                                                | ✅ Used                            |
+| 6  | Global Exception Handler                | "Spring Boot @RestControllerAdvice handler"                           | Suggested handlers for Runtime and generic Exception                      | ✅ Implemented                     |
+| 7  | ErrorResponse class                     | "Java class with status and message"                                  | Gave full class with fields and getters/setters                           | ✅ Implemented                     |
+| 8  | Constructor injection                   | "Convert Spring `@Autowired` to constructor injection"                | Suggested constructor-based approach                                      | ✅ Applied across project          |
+| 9  | Logging with SLF4J                      | "Use @Slf4j and log request and response in controller"               | Added log.info calls                                                      | ✅ Used after fixing Lombok config |
+| 10 | Swagger documentation                   | "Add Swagger to Spring Boot 3 project"                                | Suggested correct Springdoc dependency and OpenAPI bean                   | ✅ Used, with fixes                |
+| 11 | Article creation API                    | "Spring Boot POST endpoint to create DB entity"                       | Provided controller/service/repo structure                                | ✅ Used                            |
+| 12 | URL fix for JDBC error                  | "Spring Boot JDBC URL error fix"                                      | Diagnosed duplicate/invalid `url` property                                | ✅ Fixed                           |
+| 13 | Lombok errors in IDE                    | "Lombok not working in IntelliJ"                                      | Listed plugin, annotation processing, rebuild steps                       | ✅ Solved issue                    |
+| 14 | Hibernate validation                    | "Use Hibernate Validator annotations on DTO"                          | Gave `@NotBlank`, `@Size`, etc.                                           | ✅ Used on `ArticleRequest`        |
+| 15 | Swagger not loading                     | "Springdoc Swagger UI not working"                                    | Helped update dependency version and path                                 | ✅ Resolved                        |
 
-| #  | Context / Task           | Prompt Given to AI                        | AI Output / Suggestion              | Action Taken            |
-| -- | ------------------------ | ----------------------------------------- | ----------------------------------- | ----------------------- |
-| 1  | MySQL Config             | Spring Boot MySQL config                  | Gave full datasource properties     | ✅ Used                  |
-| 2  | Create search controller | REST API with query param and service     | ResponseEntity and method signature | ✅ Implemented           |
-| 3  | Search logic             | Find articles by keyword                  | `filter().collect()` logic          | ✅ Used                  |
-| 4  | Improve summary output   | Remove newlines in string summary         | Suggested `String.join()`           | ✅ Replaced              |
-| 5  | DTO mapping              | Convert request to entity                 | Field mapping method                | ✅ Used                  |
-| 6  | Exception handling       | Global handler with @RestControllerAdvice | Runtime & Exception handlers        | ✅ Implemented           |
-| 7  | ErrorResponse class      | Java class with status + message          | Provided class with getters/setters | ✅ Added                 |
-| 8  | Logging with SLF4J       | Use @Slf4j in Spring classes              | Added log.info(...) calls           | ✅ Used after IDE config |
-| 9  | Swagger integration      | Swagger 3 + Spring Boot 3 support         | SpringDoc config class + UI URL     | ✅ Working               |
-| 10 | Validation               | Hibernate Validator for request DTO       | `@NotBlank`, `@Size`, etc.          | ✅ Annotated DTO         |
 
 
 ---
