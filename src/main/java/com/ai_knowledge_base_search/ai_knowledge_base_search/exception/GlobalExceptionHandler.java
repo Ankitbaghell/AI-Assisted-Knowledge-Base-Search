@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(SystemException.class)
     public ResponseEntity<ErrorResponse> handleSystemException(SystemException ex) {
         log.error("SystemException occurred: {}", ex.getMessage(), ex);
-        ErrorResponse errorResponse = new ErrorResponse("Error in getting articles", ex.getMessage());
+        ErrorResponse errorResponse = new ErrorResponse("Error in  getting articles", ex.getMessage());
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
     }
 
